@@ -1,26 +1,29 @@
-﻿import { PageShell } from '@/components/page-shell'
-import { Hero } from '@/components/home/hero'
-import { Intro } from '@/components/home/intro'
-import { Property } from '@/components/home/property'
-import { RoomsPreview } from '@/components/home/rooms-preview'
-import PlacesWorthDrive from '@/components/PlacesWorthDrive'
-import { GalleryPreview } from '@/components/home/gallery-preview'
-import { Testimonials } from '@/components/home/testimonials'
-import { Location } from '@/components/home/location'
-import { CtaBanner } from '@/components/home/cta'
+import { LandingPage } from '@/components/LandingPage'
+import { StayPage } from '@/components/StayPage'
+import { ExperienceSection } from '@/components/ExperienceSection'
+import { RoomsPage } from '@/components/RoomsPage'
+import { PlacesPage } from '@/components/PlacesPage'
+import { GalleryPage } from '@/components/GalleryPage'
+import { ReviewsPage } from '@/components/ReviewsPage'
+import { MapsPage } from '@/components/MapsPage'
+import { ContactPage } from '@/components/ContactPage'
+import { FooterPage } from '@/components/FooterPage'
 
 export default function HomePage() {
   return (
-    <PageShell>
-      <Hero />
-      <Intro />
-      <Property />
-      <RoomsPreview />
-      <PlacesWorthDrive />
-      <GalleryPreview />  
-      <Testimonials />
-      <Location />
-      <CtaBanner />
-    </PageShell>
+    <>
+      <LandingPage />
+      <main>
+        <StayPage />
+        <ExperienceSection />
+        <RoomsPage />
+        <PlacesPage />
+        <GalleryPage />
+        <ReviewsPage />
+        <MapsPage />
+        <ContactPage />
+      </main>
+      <FooterPage />
+    </>
   )
 }

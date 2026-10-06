@@ -1,9 +1,9 @@
-﻿'use client'
+'use client'
 
 import { testimonials } from '@/lib/site-data'
 import { motion } from 'framer-motion'
 
-export function Testimonials() {
+export function ReviewsPage() {
   const items = [...testimonials, ...testimonials]
 
   return (

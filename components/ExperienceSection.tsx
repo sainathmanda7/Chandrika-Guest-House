@@ -1,10 +1,10 @@
-﻿'use client'
+'use client'
 
 import { useRef } from 'react'
 import { motion, useScroll, useTransform, useMotionValueEvent } from 'framer-motion'
 import Image from 'next/image'
 
-export function Property() {
+export function ExperienceSection() {
   const containerRef = useRef<HTMLDivElement>(null)
   
   const { scrollYProgress } = useScroll({

@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import { nav, site, whatsappUrl } from '@/lib/site-data'
 
-export function Footer() {
+export function FooterPage() {
   const year = new Date().getFullYear()
   return (
     <footer className="bg-charcoal text-soft">

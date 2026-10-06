@@ -1,16 +1,119 @@
-﻿'use client'
+'use client'
 
-import { useState } from 'react'
-import { motion } from 'framer-motion'
+import { useState, useCallback, useEffect } from 'react'
+import { motion, AnimatePresence } from 'framer-motion'
 import { gallery } from '@/lib/site-data'
-import { Lightbox } from '@/components/lightbox'
+import type { GalleryImage } from '@/lib/site-data'
 import Image from 'next/image'
 
 const EASE = [0.16, 1, 0.3, 1] as const
+const MODAL_EASE = [0.22, 1, 0.36, 1] as const
+
+function Lightbox({
+  images,
+  index,
+  onClose,
+  onNavigate,
+}: {
+  images: GalleryImage[]
+  index: number | null
+  onClose: () => void
+  onNavigate: (next: number) => void
+}) {
+  const open = index !== null
+
+  const go = useCallback(
+    (dir: number) => {
+      if (index === null) return
+      onNavigate((index + dir + images.length) % images.length)
+    },
+    [index, images.length, onNavigate],
+  )
+
+  useEffect(() => {
+    if (!open) return
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') onClose()
+      if (e.key === 'ArrowRight') go(1)
+      if (e.key === 'ArrowLeft') go(-1)
+    }
+    window.addEventListener('keydown', onKey)
+    document.body.style.overflow = 'hidden'
+    return () => {
+      window.removeEventListener('keydown', onKey)
+      document.body.style.overflow = ''
+    }
+  }, [open, go, onClose])
+
+  const current = index !== null ? images[index] : null
+
+  return (
+    <AnimatePresence>
+      {open && current ? (
+        <motion.div
+          className="fixed inset-0 z-[70] flex flex-col bg-charcoal/95 backdrop-blur-sm"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.4, ease: MODAL_EASE }}
+          role="dialog"
+          aria-modal="true"
+          aria-label="Image viewer"
+        >
+          <div className="flex items-center justify-between px-5 py-5 text-soft sm:px-8">
+            <span className="text-[0.8125rem] tracking-[0.16em] tabular-nums text-soft/70">
+              {String((index ?? 0) + 1).padStart(2, '0')} / {String(images.length).padStart(2, '0')}
+            </span>
+            <button
+              type="button"
+              onClick={onClose}
+              className="text-[0.8125rem] uppercase tracking-[0.16em] text-soft/80 transition-colors hover:text-soft"
+            >
+              Close ✕
+            </button>
+          </div>
+
+          <div className="relative flex flex-1 items-center justify-center overflow-hidden px-4 pb-6 sm:px-16">
+            <button
+              type="button"
+              onClick={() => go(-1)}
+              aria-label="Previous image"
+              className="absolute left-3 z-10 flex h-11 w-11 items-center justify-center border border-soft/30 text-soft transition-colors hover:bg-soft hover:text-charcoal sm:left-6"
+            >
+              ←
+            </button>
+
+            <AnimatePresence mode="wait">
+              <motion.img
+                key={current.src}
+                src={current.src || '/placeholder.svg'}
+                alt={current.alt}
+                className="max-h-full max-w-full object-contain"
+                initial={{ opacity: 0, scale: 0.98 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 0.98 }}
+                transition={{ duration: 0.45, ease: MODAL_EASE }}
+              />
+            </AnimatePresence>
+
+            <button
+              type="button"
+              onClick={() => go(1)}
+              aria-label="Next image"
+              className="absolute right-3 z-10 flex h-11 w-11 items-center justify-center border border-soft/30 text-soft transition-colors hover:bg-soft hover:text-charcoal sm:right-6"
+            >
+              →
+            </button>
+          </div>
+
+          <p className="px-5 pb-6 text-center text-sm text-soft/60 sm:px-8">{current.alt}</p>
+        </motion.div>
+      ) : null}
+    </AnimatePresence>
+  )
+}
 
 // Random aesthetic bento grid layout for the 6 images:
-// Mobile: 3 rows (Row 1: 12-col hero; Row 2: 6+6; Row 3: 4+4+4)
-// Desktop: 3 rows (Row 1 & 2: 7-col hero on left + two 5-col cards on right; Row 3: 4+5+3 asymmetrical trio)
 const layout = [
   // 0: Road view (Special Attraction - massive hero piece spanning 7 cols & 2 rows)
   'col-span-12 row-span-1 md:col-span-7 md:row-span-2',
@@ -26,7 +129,7 @@ const layout = [
   'col-span-4 row-span-1 md:col-span-3 md:row-span-1',
 ]
 
-export function GalleryPreview() {
+export function GalleryPage() {
   const [lightbox, setLightbox] = useState<number | null>(null)
   
   // Exactly 6 curated images from public/Gallery
