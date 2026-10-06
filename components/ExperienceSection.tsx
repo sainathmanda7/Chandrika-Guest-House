@@ -41,7 +41,7 @@ export function ExperienceSection() {
           style={{ scale: imageScale }}
         >
           <Image
-            src="/images/Night-view.png"
+            src="/images/Night-view.webp"
             alt="Night view of Araku valley with starry hills"
             fill
             className="object-cover"
@@ -55,7 +55,7 @@ export function ExperienceSection() {
           style={{ opacity: dayOpacity, scale: imageScale }}
         >
           <Image
-            src="/images/Day-view.png"
+            src="/images/Day-view.webp"
             alt="Day view of Araku hills in lush sunlight"
             fill
             className="object-cover"

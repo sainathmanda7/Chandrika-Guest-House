@@ -1,6 +1,7 @@
 import { LandingPage } from '@/components/LandingPage'
 import { StayPage } from '@/components/StayPage'
 import { ExperienceSection } from '@/components/ExperienceSection'
+import { Owner } from '@/components/Owner'
 import { RoomsPage } from '@/components/RoomsPage'
 import { PlacesPage } from '@/components/PlacesPage'
 import { GalleryPage } from '@/components/GalleryPage'
@@ -16,6 +17,7 @@ export default function HomePage() {
       <main>
         <StayPage />
         <ExperienceSection />
+        <Owner />
         <RoomsPage />
         <PlacesPage />
         <GalleryPage />

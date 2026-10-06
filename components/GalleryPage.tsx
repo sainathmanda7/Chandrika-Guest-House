@@ -151,7 +151,7 @@ export function GalleryPage() {
               viewport={{ once: true }}
               className="eyebrow text-forest uppercase tracking-[0.25em] font-semibold text-[10px] sm:text-xs block mb-0.5"
             >
-              Visual Journal
+              Our Property
             </motion.span>
             <motion.h2 
               initial={{ opacity: 0, y: 10 }}
@@ -159,7 +159,7 @@ export function GalleryPage() {
               viewport={{ once: true }}
               className="font-serif text-2xl sm:text-3xl lg:text-4xl text-charcoal tracking-tight leading-none"
             >
-              A Canvas of <span className="italic font-light text-forest">Moments.</span>
+              Glimpses of our <span className="italic font-light text-forest">property.</span>
             </motion.h2>
           </div>
           

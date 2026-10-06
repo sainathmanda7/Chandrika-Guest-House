@@ -1,19 +1,17 @@
 import { Analytics } from '@vercel/analytics/next'
 import type { Metadata, Viewport } from 'next'
-import { Cormorant_Garamond, Manrope } from 'next/font/google'
+import { Playfair_Display, Inter } from 'next/font/google'
 import './globals.css'
 
-const cormorant = Cormorant_Garamond({
+const playfair = Playfair_Display({
   subsets: ['latin'],
-  weight: ['300', '400', '500', '600'],
-  variable: '--font-cormorant',
+  variable: '--font-playfair',
   display: 'swap',
 })
 
-const manrope = Manrope({
+const inter = Inter({
   subsets: ['latin'],
-  weight: ['300', '400', '500', '600'],
-  variable: '--font-manrope',
+  variable: '--font-inter',
   display: 'swap',
 })
 
@@ -29,7 +27,7 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_IN',
     siteName: 'Chandrika Guest House',
-    images: [{ url: '/images/property-exterior.png' }],
+    images: [{ url: '/images/property-exterior.webp' }],
   },
 }
 
@@ -44,7 +42,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className={`${cormorant.variable} ${manrope.variable} bg-background`}>
+    <html lang="en" className={`${playfair.variable} ${inter.variable} bg-background`}>
       <body className="antialiased">
         {children}
         {process.env.NODE_ENV === 'production' && <Analytics />}

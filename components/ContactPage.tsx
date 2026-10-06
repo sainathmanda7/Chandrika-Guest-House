@@ -133,7 +133,7 @@ export function ContactPage() {
       <section className="relative overflow-hidden bg-charcoal">
         <Parallax distance={50} className="absolute inset-0 h-[120%]">
           <ImageReveal
-            src="/images/night-terrace.png"
+            src="/images/night-terrace.webp"
             alt="Warmly lit terrace of Chandrika Guest House at dusk with string lights"
             className="h-full w-full"
             imgClassName="opacity-45"
@@ -147,7 +147,7 @@ export function ContactPage() {
           </Reveal>
           <Reveal delay={0.08}>
             <h2 className="mt-6 font-display text-4xl leading-[1.02] text-soft sm:text-6xl lg:text-7xl text-balance">
-              Come stay a while in the hills.
+              Plan your getaway with us.
             </h2>
           </Reveal>
           <Reveal delay={0.16}>

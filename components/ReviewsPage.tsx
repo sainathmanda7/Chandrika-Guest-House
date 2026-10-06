@@ -12,7 +12,7 @@ export function ReviewsPage() {
         <div>
           <span className="eyebrow text-soft/50 block mb-2">Guest Words</span>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif text-soft">
-            Stories from our guests.
+            What our guests say about us.
           </h2>
         </div>
         <a

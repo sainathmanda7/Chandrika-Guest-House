@@ -99,7 +99,7 @@ export function MapsPage() {
             <span className="eyebrow text-earth">Finding Us</span>
           </Reveal>
           <h2 className="font-display text-4xl leading-[1.05] text-charcoal sm:text-5xl lg:text-6xl">
-            In picturesque Araku Valley.
+            Find us in Araku
           </h2>
           <Reveal delay={0.1}>
             <p className="max-w-md text-base leading-relaxed text-charcoal/70 sm:text-lg">

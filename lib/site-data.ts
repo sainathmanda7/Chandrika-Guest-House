@@ -9,10 +9,10 @@ export const site = {
   fullName: 'Chandrika Guest House',
   location: 'Araku Valley, Andhra Pradesh',
   // Primary phone (provided).
-  phone: '+91 88673 18857',
-  phoneHref: 'tel:+918867318857',
+  phone: '+91 95507 44419',
+  phoneHref: 'tel:+919550744419',
   // WhatsApp uses the same number by default. Edit if a different number is used.
-  whatsapp: '918867318857',
+  whatsapp: '919550744419',
   whatsappMessage: 'Hello! I would like to enquire about a stay at Chandrika Guest House.',
   // Configurable Google Maps links. Replace the query with an exact pin when available.
   mapsSearchUrl: 'https://www.google.com/maps/search/?api=1&query=Chandrika+Guest+House+Araku+Valley',
@@ -21,7 +21,7 @@ export const site = {
     'https://www.google.com/maps?q=Araku+Valley&z=13&output=embed',
 } as const
 
-export function whatsappUrl(message = site.whatsappMessage) {
+export function whatsappUrl(message: string = site.whatsappMessage) {
   return `https://wa.me/${site.whatsapp}?text=${encodeURIComponent(message)}`
 }
 
@@ -48,7 +48,7 @@ export const rooms: Room[] = [
     id: 'room-01',
     label: 'Room 01',
     name: 'Garden View Room',
-    image: '/images/room-1.png',
+    image: '/images/room-1.webp',
     description:
       'A warm wood-framed room with a pitched timber ceiling, opening to soft green views through the windows.',
     details: ['Double bed', 'Garden-facing windows', 'Ceiling fan', 'Attached bathroom'],
@@ -57,7 +57,7 @@ export const rooms: Room[] = [
     id: 'room-02',
     label: 'Room 02',
     name: 'Corner Light Room',
-    image: '/images/room-2.png',
+    image: '/images/room-2.webp',
     description:
       'A bright corner room wrapped in natural light, with a simple work desk and calm, airy surroundings.',
     details: ['Double bed', 'Corner windows', 'Work desk', 'Attached bathroom'],
@@ -87,35 +87,35 @@ export const experiences: Experience[] = [
     title: "Raja's Seat",
     description:
       'A garden viewpoint famous for its sweeping sunsets over the layered Araku hills.',
-    image: '/images/coorg-town-day.png',
+    image: '/images/property-exterior.webp',
   },
   {
     number: '02',
     title: 'Madikeri Fort',
     description:
       'A historic hilltop fort at the heart of Madikeri, quietly holding the townâ€™s stories.',
-    image: '/images/property-exterior.png',
+    image: '/images/property-exterior.webp',
   },
   {
     number: '03',
     title: 'Abbey Falls',
     description:
       'A cascade tucked among coffee estates and spice plantations, framed by dense green.',
-    image: '/images/balcony.png',
+    image: '/Gallery/balcony.webp',
   },
   {
     number: '04',
     title: 'Coffee Plantations',
     description:
       'The scent of coffee blossom drifts across the estates that give Araku its character.',
-    image: '/images/night-terrace.png',
+    image: '/images/night-terrace.webp',
   },
   {
     number: '05',
     title: 'Araku Nature & Surroundings',
     description:
       'Misty mornings, birdsong and slow walks through the hills that surround the homestay.',
-    image: '/images/coorg-night.png',
+    image: '/images/Night-view.webp',
   },
 ]
 
@@ -127,32 +127,32 @@ export type GalleryImage = {
 
 export const gallery: GalleryImage[] = [
   {
-    src: '/Gallery/road view.png',
+    src: '/Gallery/road view.webp',
     alt: 'Road view',
     category: 'Views',
   },
   {
-    src: '/Gallery/balcony.png',
+    src: '/Gallery/balcony.webp',
     alt: 'Balcony',
     category: 'Property',
   },
   {
-    src: '/Gallery/Pent House.png',
+    src: '/Gallery/Pent House.webp',
     alt: 'Pent House',
     category: 'Property',
   },
   {
-    src: '/Gallery/Real night view.png',
+    src: '/Gallery/Real night view.webp',
     alt: 'Real night view',
     category: 'Views',
   },
   {
-    src: '/Gallery/hall.png',
+    src: '/Gallery/hall.webp',
     alt: 'Hall',
     category: 'Rooms',
   },
   {
-    src: '/Gallery/window view.png',
+    src: '/Gallery/window view.webp',
     alt: 'Window view',
     category: 'Rooms',
   },

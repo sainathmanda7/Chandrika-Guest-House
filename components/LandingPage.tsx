@@ -240,7 +240,7 @@ export function LandingPage() {
       <section ref={ref} className="relative h-[100svh] w-full overflow-hidden bg-charcoal">
         <motion.div style={{ y: reduce ? 0 : y }} className="absolute inset-0 h-[118%] w-full">
           <motion.img
-            src="/images/Landing Page.png"
+            src="/images/Landing Page.webp"
             alt="Panoramic daytime view over the hills and homes of Araku valley"
             className="h-full w-full object-cover"
             initial={{ scale: reduce ? 1 : 1.12 }}
@@ -284,8 +284,8 @@ export function LandingPage() {
           </motion.div>
 
           <h1 className="mt-2 max-w-4xl font-display text-[3.25rem] leading-[0.95] text-soft sm:text-7xl lg:text-8xl">
-            <Line delay={0.45}>Wake to the</Line>
-            <Line delay={0.58}>hills of Araku valley.</Line>
+            <Line delay={0.45}>Discover the</Line>
+            <Line delay={0.58}>magic of Araku valley.</Line>
           </h1>
 
           <motion.div

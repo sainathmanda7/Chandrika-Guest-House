@@ -191,7 +191,7 @@ export function StayPage() {
             <span className="eyebrow text-earth">Welcome to Chandrika Guest House</span>
           </Reveal>
           <h2 className="font-display text-4xl leading-[1.05] text-charcoal sm:text-5xl lg:text-[3.75rem]">
-            <TextReveal text="A home in the hills, made for slow days." />
+            <TextReveal text="A peaceful retreat surrounded by nature." />
           </h2>
           <Reveal delay={0.1}>
             <p className="max-w-md text-base leading-relaxed text-charcoal/70 sm:text-lg">
@@ -211,7 +211,7 @@ export function StayPage() {
 
         <Parallax distance={40} className="aspect-[4/5] w-full overflow-hidden lg:aspect-[5/6]">
           <ImageReveal
-            src="/images/property-exterior.png"
+            src="/images/property-exterior.webp"
             alt="Chandrika Guest House in golden evening light, with its terracotta tiled roof"
             className="h-full w-full"
             sizes="(max-width: 1024px) 100vw, 50vw"
