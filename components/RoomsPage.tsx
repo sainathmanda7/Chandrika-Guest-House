@@ -144,7 +144,7 @@ export function RoomsPage() {
               <div className="aspect-[4/3] w-full overflow-hidden">
                 <ImageReveal
                   src={room.image}
-                  alt={`${room.name} at North Breeze homestay`}
+                  alt={`${room.name} at Chandrika Guest House`}
                   className="h-full w-full"
                   imgClassName="transition-transform duration-[1400ms] ease-out group-hover:scale-[1.05]"
                   sizes="(max-width: 640px) 100vw, 50vw"

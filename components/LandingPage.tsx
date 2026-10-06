@@ -98,9 +98,9 @@ function Navbar() {
           <Link
             href="/"
             className={`font-display text-xl tracking-wide transition-all duration-500 sm:text-2xl ${textTone}`}
-            aria-label="Coorg North Breeze — home"
+            aria-label="Chandrika Guest House — home"
           >
-            North Breeze
+            Chandrika Guest House
           </Link>
 
           <ul className="hidden items-center gap-9 lg:flex">
@@ -241,7 +241,7 @@ export function LandingPage() {
         <motion.div style={{ y: reduce ? 0 : y }} className="absolute inset-0 h-[118%] w-full">
           <motion.img
             src="/images/Landing Page.png"
-            alt="Panoramic daytime view over the hills and homes of Coorg"
+            alt="Panoramic daytime view over the hills and homes of Araku valley"
             className="h-full w-full object-cover"
             initial={{ scale: reduce ? 1 : 1.12 }}
             animate={{ scale: reduce ? 1 : 1 }}
@@ -274,7 +274,7 @@ export function LandingPage() {
 
             <div className="flex flex-wrap items-baseline gap-2 sm:gap-3">
               <span className="font-serif italic text-lg sm:text-xl lg:text-2xl text-amber-200/95 tracking-wide drop-shadow-sm">
-                Coorg North Breeze Homestay
+                Chandrika Guest House
               </span>
               <span className="text-soft/40 font-light hidden sm:inline">&mdash;</span>
               <span className="eyebrow text-soft/75 text-[0.6875rem] sm:text-[0.75rem] uppercase tracking-[0.24em] font-medium">
@@ -285,7 +285,7 @@ export function LandingPage() {
 
           <h1 className="mt-2 max-w-4xl font-display text-[3.25rem] leading-[0.95] text-soft sm:text-7xl lg:text-8xl">
             <Line delay={0.45}>Wake to the</Line>
-            <Line delay={0.58}>hills of Coorg.</Line>
+            <Line delay={0.58}>hills of Araku valley.</Line>
           </h1>
 
           <motion.div

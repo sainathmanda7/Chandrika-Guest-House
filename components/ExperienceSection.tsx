@@ -42,7 +42,7 @@ export function ExperienceSection() {
         >
           <Image
             src="/images/Night-view.png"
-            alt="Night view of Coorg with starry hills"
+            alt="Night view of Araku valley with starry hills"
             fill
             className="object-cover"
             priority
@@ -56,7 +56,7 @@ export function ExperienceSection() {
         >
           <Image
             src="/images/Day-view.png"
-            alt="Day view of Coorg hills in lush sunlight"
+            alt="Day view of Araku hills in lush sunlight"
             fill
             className="object-cover"
             priority

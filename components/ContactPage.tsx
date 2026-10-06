@@ -134,7 +134,7 @@ export function ContactPage() {
         <Parallax distance={50} className="absolute inset-0 h-[120%]">
           <ImageReveal
             src="/images/night-terrace.png"
-            alt="Warmly lit terrace of North Breeze at dusk with string lights"
+            alt="Warmly lit terrace of Chandrika Guest House at dusk with string lights"
             className="h-full w-full"
             imgClassName="opacity-45"
           />

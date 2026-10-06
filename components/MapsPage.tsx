@@ -99,12 +99,12 @@ export function MapsPage() {
             <span className="eyebrow text-earth">Finding Us</span>
           </Reveal>
           <h2 className="font-display text-4xl leading-[1.05] text-charcoal sm:text-5xl lg:text-6xl">
-            Above Madikeri, Coorg.
+            In picturesque Araku Valley.
           </h2>
           <Reveal delay={0.1}>
             <p className="max-w-md text-base leading-relaxed text-charcoal/70 sm:text-lg">
-              North Breeze sits on the northern ridge of Madikeri, an easy base for the viewpoints and
-              coffee country of Coorg. Reach out and we will gladly help you plan your route.
+              Chandrika Guest House sits in the scenic surroundings of Araku, an easy base for the viewpoints and
+              coffee country of Araku valley. Reach out and we will gladly help you plan your route.
             </p>
           </Reveal>
           <Reveal delay={0.2} className="flex flex-col gap-3 pt-2 sm:flex-row sm:items-center sm:gap-4">
@@ -116,7 +116,7 @@ export function MapsPage() {
 
         <Reveal delay={0.15} className="aspect-[4/3] w-full overflow-hidden border border-charcoal/10 lg:aspect-auto">
           <iframe
-            title="Map showing Madikeri, Coorg"
+            title="Map showing Araku Valley"
             src={site.mapsEmbedUrl}
             className="h-full min-h-[320px] w-full grayscale-[0.2]"
             loading="lazy"

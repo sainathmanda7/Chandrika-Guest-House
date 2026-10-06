@@ -1,24 +1,24 @@
-﻿// -----------------------------------------------------------------------------
-// Centralized, editable content for Coorg North Breeze.
+// -----------------------------------------------------------------------------
+// Centralized, editable content for Chandrika Guest House.
 // Edit values here to update the whole site. No fabricated facts â€” placeholder
 // fields are clearly marked and safe to replace with real information.
 // -----------------------------------------------------------------------------
 
 export const site = {
-  name: 'North Breeze',
-  fullName: 'Coorg North Breeze',
-  location: 'Madikeri, Coorg, Karnataka',
+  name: 'Chandrika Guest House',
+  fullName: 'Chandrika Guest House',
+  location: 'Araku Valley, Andhra Pradesh',
   // Primary phone (provided).
   phone: '+91 88673 18857',
   phoneHref: 'tel:+918867318857',
   // WhatsApp uses the same number by default. Edit if a different number is used.
   whatsapp: '918867318857',
-  whatsappMessage: 'Hello! I would like to enquire about a stay at Coorg North Breeze.',
+  whatsappMessage: 'Hello! I would like to enquire about a stay at Chandrika Guest House.',
   // Configurable Google Maps links. Replace the query with an exact pin when available.
-  mapsSearchUrl: 'https://www.google.com/maps/search/?api=1&query=Coorg+North+Breeze+Madikeri+Coorg+Karnataka',
-  mapsDirectionsUrl: 'https://www.google.com/maps/dir/?api=1&destination=Coorg+North+Breeze+Madikeri+Coorg+Karnataka',
+  mapsSearchUrl: 'https://www.google.com/maps/search/?api=1&query=Chandrika+Guest+House+Araku+Valley',
+  mapsDirectionsUrl: 'https://www.google.com/maps/dir/?api=1&destination=Chandrika+Guest+House+Araku+Valley',
   mapsEmbedUrl:
-    'https://www.google.com/maps?q=Madikeri,Coorg,Karnataka&z=13&output=embed',
+    'https://www.google.com/maps?q=Araku+Valley&z=13&output=embed',
 } as const
 
 export function whatsappUrl(message = site.whatsappMessage) {
@@ -86,7 +86,7 @@ export const experiences: Experience[] = [
     number: '01',
     title: "Raja's Seat",
     description:
-      'A garden viewpoint famous for its sweeping sunsets over the layered Coorg hills.',
+      'A garden viewpoint famous for its sweeping sunsets over the layered Araku hills.',
     image: '/images/coorg-town-day.png',
   },
   {
@@ -107,12 +107,12 @@ export const experiences: Experience[] = [
     number: '04',
     title: 'Coffee Plantations',
     description:
-      'The scent of coffee blossom drifts across the estates that give Coorg its character.',
+      'The scent of coffee blossom drifts across the estates that give Araku its character.',
     image: '/images/night-terrace.png',
   },
   {
     number: '05',
-    title: 'Coorg Nature & Surroundings',
+    title: 'Araku Nature & Surroundings',
     description:
       'Misty mornings, birdsong and slow walks through the hills that surround the homestay.',
     image: '/images/coorg-night.png',
@@ -122,7 +122,7 @@ export const experiences: Experience[] = [
 export type GalleryImage = {
   src: string
   alt: string
-  category: 'Property' | 'Rooms' | 'Views' | 'Nature' | 'Coorg'
+  category: 'Property' | 'Rooms' | 'Views' | 'Nature' | 'Araku'
 }
 
 export const gallery: GalleryImage[] = [
@@ -192,7 +192,7 @@ export const testimonials: Testimonial[] = [
     url: "https://www.booking.com/reviews/in/hotel/coorg-estate-breeze-homestay.html",
   },
   {
-    quote: "Very nice and excellent stay. Staff are very friendly, we feel like home. Good service enjoyed the stay very much. Must stay spot in Coorg and it's away from all the town noises and busy routes...",
+    quote: "Very nice and excellent stay. Staff are very friendly, we feel like home. Good service enjoyed the stay very much. Must stay spot in Araku Valley and it's away from all the town noises and busy routes...",
     name: "Chukkath",
     detail: "Booking.com Verified Review",
     url: "https://www.booking.com/reviews/in/hotel/coorg-estate-breeze-homestay.html",

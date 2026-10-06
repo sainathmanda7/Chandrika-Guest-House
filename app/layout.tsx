@@ -18,17 +18,17 @@ const manrope = Manrope({
 })
 
 export const metadata: Metadata = {
-  title: 'Coorg North Breeze | Homestay in Madikeri, Coorg',
+  title: 'Chandrika Guest House | Homestay in Araku Valley',
   description:
-    'A peaceful homestay in Madikeri, Coorg, offering comfortable rooms, beautiful surroundings and a warm stay close to the best of Coorg.',
+    'A peaceful homestay in Araku Valley, offering comfortable rooms, beautiful surroundings and a warm stay close to the best of Araku.',
   generator: 'v0.app',
   openGraph: {
-    title: 'Coorg North Breeze | Homestay in Madikeri, Coorg',
+    title: 'Chandrika Guest House | Homestay in Araku Valley',
     description:
-      'A peaceful homestay in Madikeri, Coorg, offering comfortable rooms, beautiful surroundings and a warm stay close to the best of Coorg.',
+      'A peaceful homestay in Araku Valley, offering comfortable rooms, beautiful surroundings and a warm stay close to the best of Araku.',
     type: 'website',
     locale: 'en_IN',
-    siteName: 'Coorg North Breeze',
+    siteName: 'Chandrika Guest House',
     images: [{ url: '/images/property-exterior.png' }],
   },
 }
